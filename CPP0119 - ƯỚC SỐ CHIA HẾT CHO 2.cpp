@@ -5,22 +5,28 @@ main() {
 	int T;
 	std::cin >> T;
 	while(T--) {
-		int N, count = 0;
+		int N;
 		std::cin >> N;
 		if(N % 2)
 			std::cout << "0\n";
 		else {
-			for(int i = 1; i < sqrt(N); ++i) {
-				if(N % i == 0) {
-					if(i % 2 == 0)
-						++count;
-					if((N/i) % 2 == 0)
-						++count;
-				}
+			int tmp = 0, count = 0;
+			int i = 2;
+			while(N % 2 == 0) {
+				++tmp;
+				N /= 2;
 			}
-			int tmp = sqrt(N);
-			if(tmp*tmp == N && tmp % 2 == 0)
-				++count;
+			count = tmp;
+			for(int i = 3; i <= sqrt(N); i += 2) {
+				tmp = 0;
+				while(N % i == 0) {
+					N /= i;
+					++tmp;
+				}
+				count *= (tmp + 1);
+			}
+			if(N > 1)
+				count *= 2;
 			std::cout << count << "\n";
 		}
 	}
