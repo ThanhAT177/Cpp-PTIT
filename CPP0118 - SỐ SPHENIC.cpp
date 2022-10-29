@@ -3,7 +3,7 @@
 
 int check(int N) {
 	int count = 0, mu = 0;
-	while(N % 2 == 0) {
+	while(!(N & 1)) {
 		++mu;
 		if(mu == 2)
 			return 0;
