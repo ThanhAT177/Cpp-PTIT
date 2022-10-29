@@ -6,7 +6,7 @@ bool prime(int N) {
 		return false;
 	if(N == 2)
 		return true;
-	if(N % 2 == 0)
+	if(!(N & 1))
 		return false;
 	for(int i = 3; i <= sqrt(N); i += 2)
 		if(N % i == 0)
