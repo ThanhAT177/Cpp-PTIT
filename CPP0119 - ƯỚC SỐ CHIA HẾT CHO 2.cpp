@@ -18,7 +18,7 @@ main() {
 			}
 			count = mu;
 			for(int i = 3; i <= sqrt(N); i += 2) {
-				tmp = 0;
+				mu = 0;
 				while(N % i == 0) {
 					N /= i;
 					++mu;
