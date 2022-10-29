@@ -18,9 +18,9 @@ main() {
 	while(T--) {
 		int M, N;
 		std::cin >> M >> N;
-		if(N > A.back()) {
+		if(N >= A.back()) {
 			int i = A[A.size() - 1];
-			while(N > A.back()) {
+			while(N >= A.back()) {
 				i += 2;
 				if(prime(i))
 					A.push_back(i);
