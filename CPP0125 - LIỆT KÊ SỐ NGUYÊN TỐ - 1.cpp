@@ -21,6 +21,6 @@ main() {
 	if(a % 2 == 0)
 		++a;
 	for(int i = a; i <= b; i += 2)
-		if(prime(i) == 1)
+		if(prime(i))
 			std::cout << i << " ";
 }
