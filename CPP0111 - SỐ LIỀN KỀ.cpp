@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string>
 #include<cmath>
 
 std::string check(std::string s) {
