@@ -7,12 +7,12 @@ main() {
 	while(T--) {
 		int N;
 		std::cin >> N;
-		if(N % 2)
+		if(N & 1)
 			std::cout << "0\n";
 		else {
 			int mu = 0, count = 0;
 			int i = 2;
-			while(N % 2 == 0) {
+			while(!(N & 1)) {
 				++mu;
 				N /= 2;
 			}
