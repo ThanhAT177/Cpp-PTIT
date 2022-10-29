@@ -1,10 +1,12 @@
 #include<iostream>
 
 int luy_thua(int x, int y, int p) {
-	if(y == 0)	return 1;
+	if(y == 0)
+		return 1;
 	int tich = luy_thua(x, y/2, p);
 	tich = ((long long)tich*tich) % p;
-	if(y % 2)	tich = ((long long)tich*x) % p;
+	if(y & 1)
+		tich = ((long long)tich*x) % p;
 	return tich;
 }
 
