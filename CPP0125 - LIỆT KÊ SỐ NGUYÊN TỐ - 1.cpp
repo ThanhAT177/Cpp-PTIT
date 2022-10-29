@@ -18,7 +18,7 @@ main() {
 		std::cout << "2 ";
 		++a;
 	}
-	if(a % 2 == 0)
+	if(!(a & 1))
 		++a;
 	for(int i = a; i <= b; i += 2)
 		if(prime(i))
