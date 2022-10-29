@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string>
 
 long long mod(std::string b, long long a) {
 	long long res = 0;
