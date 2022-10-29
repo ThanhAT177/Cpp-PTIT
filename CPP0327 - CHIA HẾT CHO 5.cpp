@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string>
 
 main() {
 	int T;
@@ -11,7 +10,9 @@ main() {
 		for(int i = 0; i < s.length(); ++i) {
 			sum = (2*sum + s[i] - '0') % 5;
 		}
-		if(sum % 5 == 0) std::cout << "Yes\n";
-		else std::cout << "No\n";
+		if(sum % 5 == 0)
+			std::cout << "Yes\n";
+		else
+			std::cout << "No\n";
 	}
 }
