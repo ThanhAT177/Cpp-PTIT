@@ -13,7 +13,8 @@ main() {
 		std::sort(A, A + n);
 		for(int i = 0; i < n/2; ++i)
 			std::cout << A[n - i - 1] << " " << A[i] << " ";
-		if(n % 2 == 1)	std::cout << A[n/2];
+		if(n & 1)
+			std::cout << A[n/2];
 		std::cout << "\n";
 		delete []A;
 	}
