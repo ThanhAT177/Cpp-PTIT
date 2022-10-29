@@ -1,10 +1,9 @@
 #include<iostream>
-#include<string>
 
 std::string check(std::string s) {
 	int l = s.length();
 	for(int i = 0; i <= l/2; ++i) {
-		if(s[i] % 2 == 1 || s[i] != s[l - 1 - i])
+		if(s[i] & 1 || s[i] != s[l - 1 - i])
 			return "NO\n";
 	}
 	return "YES\n";
