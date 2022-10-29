@@ -4,7 +4,7 @@
 int can_bang(int N) {
 	int ss = 0;
 	while(N) {
-		if((N % 10) % 2 == 0)
+		if((N % 10) & 1)
 			++ss;
 		else
 			--ss;
