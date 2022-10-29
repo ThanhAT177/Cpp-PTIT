@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string>
 
 void phone(char &x) {
 	if(x >= 'W')
