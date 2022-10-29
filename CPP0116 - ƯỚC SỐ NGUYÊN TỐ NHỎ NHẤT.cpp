@@ -17,10 +17,10 @@ main() {
 		std::cin >> N;
 		if(N > A.size()) {
 			for(int i = A.size() + 1; i <= N; ++i) {
-				if(i % 2 == 0)
-					A.push_back(2);
-				else
+				if(i & 1)
 					A.push_back(lcd(i));
+				else
+					A.push_back(2);
 			}
 		}
 		for(int i = 0; i < N; ++i)
