@@ -8,7 +8,7 @@ main() {
 	while(T--) {
 		ll N;
 		std::cin >> N;
-		while(N % 2 == 0) {
+		while(!(N & 1)) {
 			std::cout << 2 << " ";
 			N /= 2;
 		}
@@ -18,7 +18,8 @@ main() {
 				std::cout << i << " ";
 			}
 		}
-		if(N > 1) std::cout << N;
+		if(N > 1)
+			std::cout << N;
 		std::cout << "\n";
 	}
 }
