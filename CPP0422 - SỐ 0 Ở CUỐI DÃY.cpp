@@ -11,13 +11,14 @@ main() {
 		for(int i = 0; i < n; ++i)
 			std::cin >> A[i];
 		for(long long x : A) {
-			if(x)	std::cout << x << " ";
-			else	++count;
+			if(x)
+				std::cout << x << " ";
+			else
+				++count;
 		}
-		while(count--)	std::cout << "0 ";
+		while(count--)
+			std::cout << "0 ";
 		std::cout << "\n";
 		A.clear();
 	}
 }
-Footer
-© 2022 GitHub, Inc. 
