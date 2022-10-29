@@ -2,8 +2,9 @@
 typedef long long ll;
 
 ll GCD(ll a, ll b) {
-	if(b == 0) return a;
-	return GCD(b, a%b);
+	if(b == 0)
+		return a;
+	return GCD(b, a % b);
 }
 
 main() {
