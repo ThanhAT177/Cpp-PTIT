@@ -15,12 +15,8 @@ main() {
 	while(T--) {
 		int N;
 		std::cin >> N;
-		while(N > 9) tinh_tong(N);
+		while(N > 9)
+			tinh_tong(N);
 		std::cout << N << "\n";
 	}
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-
-    Terms
