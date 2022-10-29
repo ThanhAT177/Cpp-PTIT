@@ -6,7 +6,7 @@ bool prime(int N) {
 		return false;
 	if(N == 2)
 		return true;
-	if(N % 2 == 0)
+	if(!(N & 1))
 		return false;
 	for(int i = 3; i <= sqrt(N); i += 2)
 		if(N % i == 0)
@@ -29,7 +29,7 @@ main() {
 		std::cin >> N;
 		if(prime(N - 2)) {
 			std::cout << "2 " << N - 2 << "\n";
-		} else if(N % 2) {
+		} else if(N & 1) {
 			std::cout << "-1\n";
 		} else {
 			bool in = true;
