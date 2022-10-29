@@ -32,7 +32,7 @@ int stg(int N) {
 }
 
 int prime(int N) {
-	if(N % 2 == 0)
+	if(!(N & 1)
 		return 0;
 	for(int i = 3; i <= sqrt(N); i += 2)
 		if(N % i == 0)
