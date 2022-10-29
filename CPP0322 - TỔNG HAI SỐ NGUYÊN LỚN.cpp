@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string>
 #include<algorithm>
 
 std::string calculate(std::string s1, std::string s2) {
