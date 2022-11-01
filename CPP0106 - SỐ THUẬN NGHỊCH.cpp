@@ -1,28 +1,30 @@
-#include<iostream>
+#include <iostream>
 typedef long long ll;
 
-ll nghich_dao(ll N) {
-	ll temp = N, dao = 0;
-	while(temp) {
+ll NghichDao(ll n) {
+	ll tmp = n, dao = 0;
+	while(tmp) {
 		dao *= 10;
-		dao += temp % 10;
-		temp /= 10;
+		dao += tmp % 10;
+		tmp /= 10;
 	}
 	return dao;
 }
 
-void check(ll N) {
-	if(nghich_dao(N) == N)
+void ThuanNghich(ll n) {
+	if (NghichDao(n) == n) {
 		std::cout << "YES\n";
-	else std::cout << "NO\n";
+	} else {
+		std::cout << "NO\n";
+	}
 }
 
 main() {
-	int T;
-	std::cin >> T;
-	while(T--) {
-		ll N;
-		std::cin >> N;
-		check(N);
+	int t;
+	std::cin >> t;
+	while(t--) {
+		ll n;
+		std::cin >> n;
+		ThuanNghich(n);
 	}
 }
