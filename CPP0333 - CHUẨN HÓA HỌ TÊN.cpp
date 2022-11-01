@@ -1,26 +1,18 @@
 #include<iostream>
 
-int fix(std::string &s, int i) {
-	if(s[i] >= 'a')
-			s[i] -= 32;
-	for(i = i + 1; s[i] != ' '; ++i) {
-		if(s[i] >= 'A' && s[i] <= 'Z')
-			s[i] += 32;
-	}
-	return i + 1;
-}
-
 main() {
 	std::string s;
 	getline(std::cin, s);
 	int end = s.rfind(' ');
-	s.insert(end, ",");
-	for(int j = end + 2; j < s.length(); ++j)
-		if(s[j] >= 'a')
-			s[j] -= 32;
-	int i = 0;
-	while(i < end) {
-		i = fix(s, i);
+	for(int i = end + 1; i < s.length(); ++i)
+		s[i] = toupper(s[i]);
+	for(int i = 1; i < end; ++i) {
+		if(s[i - 1] == ' ')
+			s[i] = toupper(s[i]);
+		else
+			s[i] = tolower(s[i]);
 	}
+	s[0] = toupper(s[0]);
+	s.insert(end, ",");
 	std::cout << s;
 }
