@@ -1,5 +1,5 @@
-#include<iostream>
-#include<iomanip>
+#include <iostream>
+#include <iomanip>
 using namespace std;
 
 class bkt {
@@ -9,15 +9,15 @@ class bkt {
 		char d1[15] = {'A', 'B', 'B', 'A', 'D', 'C', 'C', 'A', 'B', 'D', 'C', 'C', 'A', 'B', 'D'};
 		char d2[15] = {'A', 'C', 'C', 'A', 'B', 'C', 'D', 'D', 'B', 'B', 'C', 'D', 'D', 'B', 'B'};
 
-		double tinh_diem() {
+		double TinhDiem() {
 			double tmp = 10;
-			if(ma_de == 101) {
-				for(int i = 0; i < 15; i++)
-					if(bai_lam[i] != d1[i])
+			if (ma_de == 101) {
+				for (int i = 0; i < 15; i++)
+					if (bai_lam[i] != d1[i])
 						tmp -= (double) 10/15;
 			} else {
-				for(int i = 0; i < 15; i++)
-					if(bai_lam[i] != d2[i])
+				for (int i = 0; i < 15; i++)
+					if (bai_lam[i] != d2[i])
 						tmp -= (double) 10/15;
 			}
 			return tmp;
@@ -29,14 +29,14 @@ class bkt {
 				cin >> bai_lam[i];
 		}
 		~bkt() {
-			cout << setprecision(2) << fixed << tinh_diem() << "\n";
+			cout << setprecision(2) << fixed << TinhDiem() << "\n";
 		}
 };
 
 main() {
-	int T;
-	cin >> T;
-	while(T--) {
+	int t;
+	cin >> t;
+	while(t--) {
 		bkt x;
 		x.nhap();
 	}
