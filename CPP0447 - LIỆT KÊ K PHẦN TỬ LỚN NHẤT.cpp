@@ -12,7 +12,7 @@ main() {
 			std::cin >> a[i];
 		}
 		std::sort(a, a + n);
-		for(int i = n - 1; i >= n - k; --i) {
+		for (int i = n - 1; i >= n - k; --i) {
 			std::cout << a[i] << ' ';
 		}
 		std::cout << '\n';
