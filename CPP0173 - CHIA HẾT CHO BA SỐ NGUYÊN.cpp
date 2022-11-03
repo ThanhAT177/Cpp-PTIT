@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <cmath>
 
-long long lcm(long long a, long long b, long long c) {
+long long Lcm(long long a, long long b, long long c) {
 	long long tmp = a*b/std::__gcd(a, b);
 	return tmp*c/std::__gcd(tmp, c);
 }
@@ -17,6 +17,6 @@ main() {
 	while (t--) {
 		long long n, x, y, z;
 		std::cin >> x >> y >> z >> n;
-		std::cout << Calculate(lcm(x, y, z), n) << '\n';
+		std::cout << Calculate(Lcm(x, y, z), n) << '\n';
 	}
 }
