@@ -10,7 +10,6 @@ bool IsPrime(int n) {
 }
 
 main() {
-	
 	int t;
 	std::cin >> t;
 	std::vector<int> v = {4, 9};
