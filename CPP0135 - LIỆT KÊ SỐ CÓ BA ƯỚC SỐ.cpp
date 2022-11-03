@@ -2,33 +2,33 @@
 #include<cmath>
 #include<vector>
 
-bool prime(int N) {
-	for(int i = 3; i <= sqrt(N); i += 2)
-		if(N % i == 0)
+bool IsPrime(int n) {
+	for(int i = 3; i <= sqrt(n); i += 2)
+		if(n % i == 0)
 			return false;
 	return true;
 }
 
 main() {
-	int T;
-	std::cin >> T;
-	std::vector<int> A(3, 0);
-	A[1] = 4;
-	A[2] = 9;
-	while(T--) {
-		int N;
-		std::cin >> N;
-		if(N > A.back()) {
-			int i = sqrt(A.back());
-			while(N > A.back()) {
+	
+	int t;
+	std::cin >> t;
+	std::vector<int> v = {4, 9};
+	while(t--) {
+		int n;
+		std::cin >> n;
+		if(n > v.back()) {
+			int i = sqrt(v.back()) + 2;
+			while(n > v.back()) {
+				if (IsPrime(i)) {
+					v.emplace_back(i*i);
+				}
 				i += 2;
-				if(prime(i))
-					A.push_back(i*i);
 			}
 		}
-		for(int i = 1; A[i] <= N; ++i)
-				std::cout << A[i] << " ";
-		std::cout << "\n";
+		for(int i = 0; v[i] <= n; ++i) {
+			std::cout << v[i] << ' ';
+		}
+		std::cout << '\n';
 	}
-	A.clear();
 }
