@@ -1,18 +1,22 @@
-#include<iostream>
+#include <iostream>
+
+void Convert(std::string &s) {
+	int key = s.rfind(' ');
+	for (int i = 0; i < key; ++i) {
+		s[i] = toupper(s[i]);
+		for (i += 1; s[i] != ' '; ++i) {
+			s[i] = tolower(s[i]);
+		}
+	}
+	for (int i = key + 1; s[i]; ++i) {
+		s[i] = toupper(s[i]);
+	}
+	s.insert(key, ",");
+}
 
 main() {
 	std::string s;
-	getline(std::cin, s);
-	int end = s.rfind(' ');
-	for(int i = end + 1; i < s.length(); ++i)
-		s[i] = toupper(s[i]);
-	for(int i = 1; i < end; ++i) {
-		if(s[i - 1] == ' ')
-			s[i] = toupper(s[i]);
-		else
-			s[i] = tolower(s[i]);
-	}
-	s[0] = toupper(s[0]);
-	s.insert(end, ",");
+	std::getline(std::cin, s);
+	Convert(s);
 	std::cout << s;
 }
