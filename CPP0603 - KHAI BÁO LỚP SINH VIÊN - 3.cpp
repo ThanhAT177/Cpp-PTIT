@@ -38,7 +38,7 @@ class SinhVien {
 		}
 		friend void operator << (ostream &mycout, SinhVien &a) {
 			cout << a.code_ << ' ' << a.name_ << ' ' << a.class_ << ' ' << a.birth_
-			<< ' ' << setprecision(2) << fixed << a.gpa_;
+			     << ' ' << setprecision(2) << fixed << a.gpa_;
 		}
 };
 
